@@ -1,0 +1,28 @@
+@use "@/assets/styles/scss/mixin.module" as mixin;
+
+$tag-colors: mixin.$theme-color, #ea7d23, #34c815, #f63232;
+$tag-types: default, warning, success, error;
+
+.v-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-right: 8px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  flex-shrink: 0;
+
+  @for $i from 1 through length($tag-types) {
+    &-#{nth($tag-types, $i)} {
+      $color: nth($tag-colors, $i);
+      background-color: lighten($color, 35%);
+      color: $color;
+      border: 1px solid lighten($color, 20%);
+    }
+  }
+}

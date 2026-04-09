@@ -26,7 +26,8 @@
 		"tsc": "tsc --noEmit",
 		"prepare": "husky install",
 		"commit": "git-cz",
-		"release": "standard-version"
+		"release": "standard-version",
+		"gen-scss-types": "typed-scss-modules src/**/*.module.scss"
 	},
 	"config": {
 		"commitizen": {
@@ -35,6 +36,8 @@
 	},
 	"dependencies": {
 		"axios": "^1.14.0",
+		"chroma-js": "^3.2.0",
+		"classnames": "^2.5.1",
 		"eslint-import-resolver-alias": "^1.1.2",
 		"react": "^19.2.4",
 		"react-dom": "^19.2.4",
@@ -46,6 +49,7 @@
 	"devDependencies": {
 		"@eslint/js": "^10.0.1",
 		"@nabla/vite-plugin-eslint": "^3.0.1",
+		"@types/chroma-js": "^3.1.2",
 		"@types/node": "latest",
 		"@types/react": "^19.2.14",
 		"@types/react-dom": "^19.2.3",
@@ -60,6 +64,8 @@
 		"lint-staged": "^16.4.0",
 		"prettier": "^3.8.1",
 		"sass": "^1.99.0",
+		"sass-loader": "^16.0.7",
+		"typed-scss-modules": "^8.1.1",
 		"typescript": "^6.0.2",
 		"typescript-eslint": "^8.58.1",
 		"vite": "^8.0.7"

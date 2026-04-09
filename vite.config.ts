@@ -9,11 +9,12 @@ export default defineConfig({
     css: {
         // preprocessorOptions: {
         //     scss: {
-        //         additionalData: '@import "@/assets/styles/scss/mixin.scss";',
+        //         additionalData: '@import "@/assets/styles/scss/mixin.module.scss";',
         //     }
         // },
         modules: {
-            localsConvention: "camelCaseOnly"
+            localsConvention: "camelCaseOnly",
+            generateScopedName: "[local]"
         }
     },
     resolve: {

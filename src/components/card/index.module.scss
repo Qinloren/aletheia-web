@@ -1,0 +1,17 @@
+@use "@/assets/styles/scss/mixin.module" as mixin;
+
+.v-card {
+  width: 260px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 16px;
+  padding: 20px;
+  height: fit-content;
+  min-width: 220px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+
+
+  .v-card-content {
+    width: 100%;
+    height: 100%;
+  }
+}

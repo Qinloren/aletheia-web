@@ -1,3 +1,10 @@
+@use "@/assets/styles/scss/mixin.module" as mixin;
 .content {
-
+  height: calc(100vh - #{mixin.$header-height});
+  overflow-y: auto;
+  .content-wrap {
+    max-width: mixin.$container-width;
+    margin: 24px auto 0;
+    padding: 0 15px;
+  }
 }

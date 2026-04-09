@@ -1,2 +1,124 @@
-.header {
+@use "@/assets/styles/scss/mixin" as mixin;
+
+.header-container {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: mixin.$header-height;
+  background: mixin.$header-bg-color;
+  box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.02);
+
+  .header-warp {
+    width: mixin.$container-width;
+    height: mixin.$header-height;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo-box {
+      .logo-icon {
+      }
+      .logo-text {
+        background: linear-gradient(90deg, mixin.$theme-color-dark, mixin.$theme-color-light);
+        background-clip: text;
+        color: transparent;
+        font-size: 26px;
+        font-weight: 700;
+      }
+    }
+
+    .menu-box {
+      .menu {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        height: mixin.$header-height;
+        gap: 22px;
+        a {
+          text-decoration: none;
+          height: mixin.$header-height;
+        }
+        .menu-item {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          font-size: 16px;
+          font-weight: 500;
+          color: mixin.$text-color;
+          cursor: pointer;
+          transition: color .3s ease;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            border-radius: 100px;
+            opacity: 0.8;
+            transform: scaleX(0);
+            transition: width .3s ease,
+                      left .3s ease,
+                      transform .3s ease;
+          }
+          &:hover {
+            color: mixin.$theme-color;
+            &::after {
+              color: mixin.$theme-color;
+            }
+          }
+          &.active {
+            color: mixin.$theme-color-dark;
+            &::after {
+              color: mixin.$theme-color-dark;
+            }
+          }
+          &:hover,
+          &.active {
+            &::after {
+              left: 0;
+              transform: scaleX(1);
+              background: mixin.$theme-color;
+            }
+          }
+        }
+      }
+    }
+
+    .filter-box {
+      display: flex;
+      align-items: center;
+      .search-box {
+        position: relative;
+        width: 320px;
+        .search-icon {
+          position: absolute;
+          left: 12px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 22px;
+          height: 22px;
+          color: mixin.$text-color;
+          pointer-events: none;
+        }
+        .search-input {
+          width: 100%;
+          height: 38px;
+          border-radius: 12px;
+          border: 1px solid mixin.$border-color;
+          padding: 0 14px 0 40px;
+          font-size: 14px;
+          outline: none;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+          transition: all 0.28s ease;
+          &:focus {
+            border-color: mixin.$theme-color;
+            box-shadow: 0 0 0 4px mixin.$box-shadow-color;
+          }
+        }
+      }
+    }
+  }
 }

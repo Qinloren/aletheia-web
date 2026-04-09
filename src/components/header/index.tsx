@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "./index.module.scss";
+import "./index.module.scss";
 import Search from "supercons/Search";
 import {Link } from "react-router-dom";
 
@@ -9,35 +9,35 @@ interface VHeaderProps {
 }
 
 const VHeader: React.FC<VHeaderProps> = (props) => {
-    return <div className={styles.headerContainer}>
-        <div className={styles.headerWarp}>
-            <div className={styles.logoBox}>
-                <div className={styles.logoIcon}></div>
-                <h2 className={styles.logoText}>{props.title}</h2>
+    return <div className={"v-header-container"}>
+        <div className={"v-header-warp"}>
+            <div className={"logo-box"}>
+                <div className={"logo-icon"}></div>
+                <h2 className={"logo-text"}>{props.title}</h2>
             </div>
-            <div className={styles.menuBox}>
-                <ul className={styles.menu}>
+            <div className={"menu-box"}>
+                <ul className={"menu"}>
                     <Link to={"/"}>
-                        <li className={[styles.menuItem, styles.active].join(' ')}>首页</li>
+                        <li className={"menu-item active"}>首页</li>
                     </Link>
                     <Link to={"/articles"}>
-                        <li className={styles.menuItem}>文章</li>
+                        <li className={"menu-item"}>文章</li>
                     </Link>
                     <Link to={"/resources"}>
-                        <li className={styles.menuItem}>资源</li>
+                        <li className={"menu-item"}>资源</li>
                     </Link>
                     <Link to={"/qas"}>
-                        <li className={styles.menuItem}>问答</li>
+                        <li className={"menu-item"}>问答</li>
                     </Link>
                     <Link to={"/ai"}>
-                        <li className={styles.menuItem}>AI助手</li>
+                        <li className={"menu-item"}>AI助手</li>
                     </Link>
                 </ul>
             </div>
-            <div className={styles.filterBox}>
-                <div className={styles.searchBox}>
-                    <Search className={styles.searchIcon}/>
-                    <input type="text" className={styles.searchInput} placeholder="搜索用户、帖子、内容....."/>
+            <div className={"filter-box"}>
+                <div className={"search-box"}>
+                    <Search className={"search-icon"}/>
+                    <input type="text" className={"search-input"} placeholder="搜索用户、帖子、内容....."/>
                 </div>
             </div>
         </div>

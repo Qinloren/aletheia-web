@@ -1,6 +1,6 @@
-@use "@/assets/styles/scss/mixin" as mixin;
+@use "@/assets/styles/scss/mixin.module" as mixin;
 
-.header-container {
+.v-header-container {
   position: sticky;
   top: 0;
   left: 0;
@@ -9,8 +9,8 @@
   background: mixin.$header-bg-color;
   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.02);
 
-  .header-warp {
-    width: mixin.$container-width;
+  .v-header-warp {
+    max-width: mixin.$container-width;
     height: mixin.$header-height;
     margin: 0 auto;
     display: flex;

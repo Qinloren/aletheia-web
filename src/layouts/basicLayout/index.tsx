@@ -7,7 +7,7 @@ import styles from "./index.module.scss";
 const VBasicLayout: React.FC = () => {
     return (
         <>
-            <VHeader>This is Header.</VHeader>
+            <VHeader title="Vortexia"/>
             <div className={styles.content}>
                 <Outlet />
             </div>

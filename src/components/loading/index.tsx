@@ -1,10 +1,10 @@
-import styles from "./index.module.scss";
+import "./index.module.scss";
 
 const VLoading = () => {
     return (
-        <div className={styles.loadingContainer}>
-            <div className={styles.loadingIndicator} />
-            <p className={styles.loadingText}>页面加载中，请稍后...</p>
+        <div className={"v-loading-container"}>
+            <div className={"v-loading-indicator"} />
+            <p className={"v-loading-text"}>页面加载中，请稍后...</p>
         </div>
     )
 }

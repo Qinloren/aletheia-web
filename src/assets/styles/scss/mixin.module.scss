@@ -1,0 +1,24 @@
+$header-height: 55px;
+$header-bg-color:  rgb(255, 255, 255);
+$container-width: 1200px;
+$theme-color: rgb(55 152 255);
+$theme-color-light: rgb(105, 177, 255);
+$theme-color-dark: rgb(50 133 218);
+$text-color: rgb(100, 116, 139);
+$text-color-dark: rgb(31, 41, 55);
+$border-color: rgb(226, 232, 240);
+$box-shadow-color: rgba(96, 165, 250, 0.15);
+
+
+:export {
+  headerHeight: $header-height;
+  headerBgColor: $header-bg-color;
+  containerWidth: $container-width;
+  themeColor: $theme-color;
+  theme-color-light: $theme-color-light;
+  themeColorDark: $theme-color-dark;
+  textColor: $text-color;
+  textColorDark: $text-color-dark;
+  borderColor: $border-color;
+  boxShadowColor: $box-shadow-color;
+}

@@ -1,0 +1,49 @@
+@use "@/assets/styles/scss/mixin.module" as mixin;
+
+$btn-border-colors: mixin.$border-color, mixin.$theme-color, #ea7d23, #f63232;
+$btn-bg-colors: #ffffff, mixin.$theme-color, #ea7d23, #f63232;
+$btn-colors: mixin.$text-color, #ffffff, #ffffff, #ffffff;
+$btn-types: default, primary, warning, error;
+
+.v-button {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.24s ease;
+
+  &-small {
+    height: 32px;
+    padding: 0 14px;
+    font-size: 12px;
+    border-radius: 9999px;
+  }
+
+  @for $i from 1 through length($btn-types) {
+    &-#{nth($btn-types, $i)} {
+      $color: nth($btn-bg-colors, $i);
+      $border-color: nth($btn-border-colors, $i);
+      background: $color;
+      color: nth($btn-colors, $i);
+      border: 1px solid $border-color;
+      &:hover {
+        background: lighten($color, 10%);
+      }
+      &:active {
+        background: darken($color, 10%);
+      }
+      &:disabled {
+        cursor: not-allowed;
+        background: lighten($color, 20%);
+        color: lighten(nth($btn-colors, $i), 40%);
+      }
+    }
+  }
+}

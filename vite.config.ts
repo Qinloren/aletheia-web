@@ -7,11 +7,11 @@ export default defineConfig({
     plugins: [react(), eslint()],
     envDir: "./env",
     css: {
-        preprocessorOptions: {
-            scss: {
-                additionalData: '@import "@/assets/styles/scss/mixin.scss";',
-            }
-        },
+        // preprocessorOptions: {
+        //     scss: {
+        //         additionalData: '@import "@/assets/styles/scss/mixin.scss";',
+        //     }
+        // },
         modules: {
             localsConvention: "camelCaseOnly"
         }

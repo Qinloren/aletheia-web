@@ -26,6 +26,9 @@ importers:
       standard-version:
         specifier: ^9.5.0
         version: 9.5.0
+      supercons:
+        specifier: ^0.2.0
+        version: 0.2.0(react@19.2.4)
       zustand:
         specifier: ^5.0.12
         version: 5.0.12(@types/react@19.2.14)(react@19.2.4)
@@ -2160,6 +2163,16 @@ packages:
   strip-indent@3.0.0:
     resolution: {integrity: sha512-laJTa3Jb+VQpaC6DseHhF7dXVqHTfJPCRDaEbid/drOhgitgYku/letMUqOXFoWV0zIIUbjpdH2t+tYj4bQMRQ==}
     engines: {node: '>=8'}
+
+  supercons@0.1.7:
+    resolution: {integrity: sha512-YPT9vbkLRmcU9UpQxT3ooFCZy9h9yRO6nRoShm79KHNuHGkHOfMpdgBTyo/eMq2/HKrXrpmjx5drfBm3HkWqOg==}
+    peerDependencies:
+      react: ^16.12.0 || ^17.0.1 || ^18.2.0 || ^19.0.0
+
+  supercons@0.2.0:
+    resolution: {integrity: sha512-eLiBPh+xTq0HvoL1P9lFI4c52hOZ/gcs9Nb9gboHcG26Nf7wneDyFFs5NzjYLV4OE1orxf3vAA30evg5r4gwOw==}
+    peerDependencies:
+      react: ^16.12.0 || ^17.0.1 || ^18.2.0 || ^19.0.0
 
   supports-color@5.5.0:
     resolution: {integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==}
@@ -4635,6 +4648,15 @@ snapshots:
   strip-indent@3.0.0:
     dependencies:
       min-indent: 1.0.1
+
+  supercons@0.1.7(react@19.2.4):
+    dependencies:
+      react: 19.2.4
+
+  supercons@0.2.0(react@19.2.4):
+    dependencies:
+      react: 19.2.4
+      supercons: 0.1.7(react@19.2.4)
 
   supports-color@5.5.0:
     dependencies:

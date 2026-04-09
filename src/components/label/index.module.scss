@@ -1,0 +1,18 @@
+@use "@/assets/styles/scss/mixin.module" as mixin;
+
+.v-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  .v-label-icon {
+    width: 4px;
+    height: 18px;
+    border-radius: 2px;
+  }
+  .v-label-title {
+    font-weight: 700;
+    font-size: 15px;
+    color: mixin.$text-color-dark;
+  }
+}
